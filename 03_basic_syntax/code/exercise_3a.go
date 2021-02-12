@@ -1,14 +1,13 @@
 package main
 
-import (
-	"fmt"
-	"reflect"
-)
+import "fmt"
 
 func main() {
 	var sentence = "Hello this is a sentence.\n"
 
-	fmt.Printf(sentence)
-	fmt.Println(reflect.TypeOf(sentence))
-
+	for index, letter := range sentence {
+		if index%2 == 1 {
+			fmt.Println("Index:", index, "Letter:", string(letter))
+		}
+	}
 }
